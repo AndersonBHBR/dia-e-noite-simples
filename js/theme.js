@@ -57,3 +57,19 @@ const observer = new IntersectionObserver((entries) => {
 
 // Seleciona todos os elementos com a classe .reveal e começa a observar
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const navLinks = document.getElementById('nav-links');
+
+mobileBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileBtn.classList.toggle('active');
+});
+
+// Fechar o menu ao clicar num link (importante para UX)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileBtn.classList.remove('active');
+    });
+});
