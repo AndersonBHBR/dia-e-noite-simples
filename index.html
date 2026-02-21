@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Design | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>SmartWeb</strong></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <div class="theme-controls">
+            <button id="theme-toggle" class="btn btn-primary" title="Trocar Tema">🌓</button>
+            <button id="theme-reset" class="btn" style="background: #ccc;" title="Modo Automático">Auto</button>
+        </div>
+    </nav>
+
+    <main class="card reveal">
+        <section class="hero">
+            <h1>Experiência Dinâmica e Responsiva.</h1>
+            <p style="font-size: 1.2rem; color: var(--text-sub); max-width: 600px;">
+                Este site detecta automaticamente o ciclo do dia. Explore as páginas para ver como as variáveis CSS mantêm a consistência visual.
+            </p>
+        </section>
+
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 60px;">
+            <div class="card" style="background: var(--bg-card); padding: 2rem; border-radius: 12px;">
+                <h3>Navegação Fluida</h3>
+                <p>O menu se adapta perfeitamente a qualquer dispositivo.</p>
+            </div>
+            <div class="card" style="background: var(--bg-card); padding: 2rem; border-radius: 12px;">
+                <h3>Rodapé Estruturado</h3>
+                <p>Um espaço dedicado para suas informações de contato e links úteis.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SmartWeb Design. Feito com tecnologia circadiana.</p>
+        <div style="margin-top: 10px; font-size: 0.9rem; color: var(--text-sub);">
+            Status: <span id="time-status">Calculando horário...</span>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+</body>
+</html>
